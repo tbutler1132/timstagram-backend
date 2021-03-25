@@ -1,5 +1,5 @@
 class LikeSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :picture
 
   belongs_to :user
   belongs_to :picture
