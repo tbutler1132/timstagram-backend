@@ -20,3 +20,5 @@ alien_predator_follow = Follow.create(follower: user_alien, followee: user_preda
 
 predator_alien_follow = Follow.create(follower: user_predator, followee: user_alien)
 
+predator_like_alien_pic1 = Like.create(user: user_predator, picture: alien_pic1)
+

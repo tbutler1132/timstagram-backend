@@ -1,5 +1,5 @@
 class PictureSerializer < ActiveModel::Serializer
-  attributes :id, :photo_url, :Caption, :comments
+  attributes :id, :photo_url, :Caption, :comments, :likes
 
   def comments
     object.comments.collect do |comment|
@@ -8,4 +8,5 @@ class PictureSerializer < ActiveModel::Serializer
   end
 
   belongs_to :user
+  
 end

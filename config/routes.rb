@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   resources :follows
   resources :likes
+
+  resources :pictures 
   resources :comments
-  resources :pictures
+
   resources :users
 
   post '/login', to: 'auth#create'

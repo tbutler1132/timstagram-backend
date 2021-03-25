@@ -8,6 +8,7 @@ class PicturesController < ApplicationController
 
     def show
         picture = Picture.find(params[:id])
+        render json: picture
     end
 
     def create
@@ -24,6 +25,8 @@ class PicturesController < ApplicationController
         picture.destroy
         render json: {}
     end
+
+
 
     private 
 
