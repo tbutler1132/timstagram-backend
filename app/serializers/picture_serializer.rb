@@ -3,10 +3,10 @@ class PictureSerializer < ActiveModel::Serializer
 
   def comments
     object.comments.collect do |comment|
-      { :id => comment.id, :user => comment.user.username, :content => comment.content, :picture_id => comment.picture_id }
+      { :id => comment.id, :user => comment.user, :content => comment.content, :picture_id => comment.picture_id }
     end
   end
 
   belongs_to :user
-  
+
 end
